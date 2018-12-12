@@ -1,0 +1,39 @@
+A<-matrix(c(1,4,2,5,3,6),nrow=3,byrow=TRUE)#
+sigma<-t(A)%*%A#
+eigen(sigma)#
+svd(sigma)#
+#eigen values are same for both methods#
+#eigen vector in eigen value decomposition is oppositely directed compared to the eigen samples and eigen genes
+sigma
+svd(sigma)
+svd(A)
+m<-c(1,4,2,5,3,6)#
+A<-matrix(data=m,nrow=3,ncol=2,byrow = TRUE)#
+sigma<-t(A)%*%A#
+ed<-eigen(sigma, symmetric=TRUE, only.values = FALSE, EISPACK = FALSE)#
+svd<-svd(A, LINPACK = FALSE)#
+eigen.value<-ed$values#
+singular.value<-svd$d#
+eigen.vectors<-ed$vectors#
+singular.vectors<-svd$v
+singular.vectors
+singular.value
+# Q1 COmparing eigen decomposition and singular value decomposition#
+A <- matrix(c(1:6),nrow=3)#
+A.eigen <- eigen(t(A) %*% A)#
+A.svd <- svd(A)#
+# Compare the difference between eigen/singular vectors and eigen/sigular values#
+print(mean(abs(A.eigen$vectors)-abs(A.svd$v)))#
+print(mean(abs(A.eigen$values)-(A.svd$d)^2))
+load("/Users/matianzhou/Documents/Pitt Spring 2018/BIOST2078_TA/final_project/tSNE/data/final_project/digits.RData")
+ls()
+ls(digits)
+dim(digits$x)
+length(digits$label)
+load("/Users/matianzhou/Documents/Pitt Spring 2018/BIOST2078_TA/final_project/tSNE/data/final_project/digits.RData")
+ls()
+dim(digits[[]])
+dim(digits[[1]])
+dim(digits[[2]])
+digits[[2]]
+table(digits[[2]])

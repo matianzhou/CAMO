@@ -1,0 +1,13 @@
+Package: CAMO
+Type: Package
+Title: Perform congruent analysis among model organisms
+Version: 1.0
+Date: 2018-02-13
+Author: Tianzhou Ma
+Maintainer: Tianzhou Ma <tianzhou.ma0105@gmail.com> 
+Description: The package performs differential transcriptomic quantification among model organisms both globally and at pathway level, and provide several visualization outputs for more biological insight 
+License: GPL (>= 2)
+Depends: Rcpp (>= 0.12.9), RcppArmadillo, MASS, snowfall, limma, edgeR, ggrepel, ggplot2, gplots, ConsensusClusterPlus, pathview, KEGG.db, org.Hs.eg.db
+Imports: Rcpp (>= 0.12.9), RcppArmadillo, MASS, snowfall, limma, edgeR, ggrepel, ggplot2, gplots, ConsensusClusterPlus, pathview, KEGG.db, org.Hs.eg.db
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.0.1
